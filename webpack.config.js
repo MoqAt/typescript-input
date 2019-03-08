@@ -20,6 +20,13 @@ module.exports = {
             test: /\.js$/,
             loader: ['source-map-loader'],
             enforce: 'pre'
+          },
+          {
+            test: /\.css/,
+            use: [
+              'style-loader',
+              {loader: 'css-loader', options: {url: false}}
+            ]
           }
       ]
   }
